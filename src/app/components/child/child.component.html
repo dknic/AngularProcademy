@@ -1,10 +1,5 @@
-<p>child works!</p>
-{{name}}
-<div>
- 
-  <ul>
-    <li>{{obj.name}}</li>
-    <li>{{obj.age}}</li>
-    <li>{{obj.country}}</li>
-</ul>
-</div>
+<p>Child Component!</p>
+
+<input type="text" #user>
+<button (click)="addUser(user.value); user.value=''">Add User</button>
+

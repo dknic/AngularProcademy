@@ -3,5 +3,9 @@
 
   
 </div>
-<app-child [name]="currentName"  [obj]="obj"/>
+
+<ul *ngFor="let user of users">
+  <li>{{user}}</li>
+</ul>
+<app-child  (dataEvent)="addUser($event)"></app-child>
 
