@@ -17,11 +17,13 @@ export class AppComponent implements OnInit {
       username: new FormControl(null),
       dob: new FormControl(null),
       gender: new FormControl('female'),
-      street: new FormControl(null),
-      country: new FormControl('India'),
-      city: new FormControl(null),
-      region: new FormControl(null),
-      postal: new FormControl(null),
+      address: new FormGroup({
+        street: new FormControl(null, Validators.required),
+        country: new FormControl('India'),
+        city: new FormControl(null),
+        region: new FormControl(null),
+        postal: new FormControl(null, Validators.required),
+      }),
     });
   }
 
